@@ -8,6 +8,13 @@ gem 'sqlite3'
 
 gem 'therubyracer'
 
+gem 'inherited_resources', '~> 1.4.1'
+gem 'haml', '~> 4.0.5'
+gem 'formtastic', '~> 2.2.1'
+gem 'cocoon', '~> 1.2.5'
+
+gem 'brazilian-rails', '~>3.3.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
