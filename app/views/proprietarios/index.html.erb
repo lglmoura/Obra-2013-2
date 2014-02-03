@@ -1,0 +1,39 @@
+<h1>Listing proprietarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Sexo</th>
+      <th>Rua</th>
+      <th>Numero</th>
+      <th>Complemento</th>
+      <th>Cpf</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proprietarios.each do |proprietario| %>
+      <tr>
+        <td><%= proprietario.nome %></td>
+        <td><%= proprietario.idade %></td>
+        <td><%= proprietario.sexo %></td>
+        <td><%= proprietario.rua %></td>
+        <td><%= proprietario.numero %></td>
+        <td><%= proprietario.complemento %></td>
+        <td><%= proprietario.cpf %></td>
+        <td><%= link_to 'Show', proprietario %></td>
+        <td><%= link_to 'Edit', edit_proprietario_path(proprietario) %></td>
+        <td><%= link_to 'Excluir', proprietario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proprietario', new_proprietario_path %>

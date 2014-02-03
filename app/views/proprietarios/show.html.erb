@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @proprietario.nome %>
+</p>
+
+<p>
+  <strong>Idade:</strong>
+  <%= @proprietario.idade %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @proprietario.sexo %>
+</p>
+
+<p>
+  <strong>Rua:</strong>
+  <%= @proprietario.rua %>
+</p>
+
+<p>
+  <strong>Número:</strong>
+  <%= @proprietario.numero %>
+</p>
+
+<p>
+  <strong>Complemento:</strong>
+  <%= @proprietario.complemento %>
+</p>
+
+<p>
+  <strong>CPF:</strong>
+  <%= @proprietario.cpf %>
+</p>
+
+<%= link_to 'Edit', edit_proprietario_path(@proprietario) %> |
+<%= link_to 'Back', proprietarios_path %>
