@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210230211) do
+ActiveRecord::Schema.define(version: 20140210232113) do
+
+  create_table "casafuncionarios", force: true do |t|
+    t.integer  "casa_id"
+    t.integer  "funcionario_id"
+    t.date     "dataentrada"
+    t.date     "datasaida"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "casafuncionarios", ["casa_id"], name: "index_casafuncionarios_on_casa_id"
+  add_index "casafuncionarios", ["funcionario_id"], name: "index_casafuncionarios_on_funcionario_id"
 
   create_table "casas", force: true do |t|
     t.string   "rua"

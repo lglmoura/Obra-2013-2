@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Casa:</strong>
+  <%= @casafuncionario.casa.rua %>
+</p>
+
+<p>
+  <strong>Funcionario:</strong>
+  <%= @casafuncionario.funcionario.nome %>
+</p>
+
+<p>
+  <strong>Data Entrada:</strong>
+  <%= @casafuncionario.dataentrada %>
+</p>
+
+<p>
+  <strong>Data Saida:</strong>
+  <%= @casafuncionario.datasaida %>
+</p>
+
+<%= link_to 'Edit', edit_casafuncionario_path(@casafuncionario) %> |
+<%= link_to 'Back', casafuncionarios_path %>

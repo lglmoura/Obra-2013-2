@@ -1,0 +1,33 @@
+<h1>Listing casafuncionarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Casa</th>
+      <th>Funcionario</th>
+      <th>Dataentrada</th>
+      <th>Datasaida</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @casafuncionarios.each do |casafuncionario| %>
+      <tr>
+        <td><%= casafuncionario.casa %></td>
+        <td><%= casafuncionario.funcionario %></td>
+        <td><%= casafuncionario.dataentrada %></td>
+        <td><%= casafuncionario.datasaida %></td>
+        <td><%= link_to 'Show', casafuncionario %></td>
+        <td><%= link_to 'Edit', edit_casafuncionario_path(casafuncionario) %></td>
+        <td><%= link_to 'Excluir', casafuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Casafuncionario', new_casafuncionario_path %>

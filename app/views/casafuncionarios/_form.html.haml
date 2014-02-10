@@ -1,0 +1,10 @@
+= semantic_form_for [@casafuncionario] do |form|
+  
+  = form.input :casa, :member_label => :rua, :label => 'Casa' 
+  = form.input :funcionario, :member_label => :nome, :label => 'Funcionario'
+
+  = form.input :dataentrada, :as => :string,:label => 'Data Entrada'
+  = form.input :datasaida, :as => :string,:label => 'Data Saida'
+  
+ 
+  = form.submit 'Salvar'
