@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210214543) do
+ActiveRecord::Schema.define(version: 20140210224838) do
 
   create_table "casas", force: true do |t|
     t.string   "rua"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 20140210214543) do
   end
 
   add_index "casas", ["proprietario_id"], name: "index_casas_on_proprietario_id"
+
+  create_table "funcaos", force: true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "proprietarios", force: true do |t|
     t.string   "nome"
