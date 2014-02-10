@@ -1,0 +1,10 @@
+= semantic_form_for [@casa] do |form|
+  
+  = form.input :rua, :label => 'Rua'
+  = form.input :complemento, :label => 'Complemento' 
+  = form.input :bairro, :label => 'Bairro' 
+  = form.input :cidade, :label => 'Cidade'
+  = form.input :datainicio, :as => :string, :label => 'Data Inicio'
+  = form.input :proprietario, :member_label => :nome, :label => 'Proprietario' 
+  = form.submit 'Salvar'
+

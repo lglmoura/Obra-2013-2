@@ -1,0 +1,37 @@
+<h1>Listing casas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rua</th>
+      <th>Complemento</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Datainicio</th>
+      <th>Proprietario</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @casas.each do |casa| %>
+      <tr>
+        <td><%= casa.rua %></td>
+        <td><%= casa.complemento %></td>
+        <td><%= casa.bairro %></td>
+        <td><%= casa.cidade %></td>
+        <td><%= casa.datainicio %></td>
+        <td><%= casa.proprietario %></td>
+        <td><%= link_to 'Show', casa %></td>
+        <td><%= link_to 'Edit', edit_casa_path(casa) %></td>
+        <td><%= link_to 'Excluir', casa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Casa', new_casa_path %>

@@ -1,4 +1,6 @@
 Obra::Application.routes.draw do
+  resources :casas
+
   resources :proprietarios
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rua:</strong>
+  <%= @casa.rua %>
+</p>
+
+<p>
+  <strong>Complemento:</strong>
+  <%= @casa.complemento %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @casa.bairro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @casa.cidade %>
+</p>
+
+<p>
+  <strong>Data Inicio:</strong>
+  <%= @casa.datainicio %>
+</p>
+
+<p>
+  <strong>Proprietario:</strong>
+  <%= @casa.proprietario.nome %>
+</p>
+
+<%= link_to 'Edit', edit_casa_path(@casa) %> |
+<%= link_to 'Back', casas_path %>

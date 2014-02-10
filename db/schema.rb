@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203225144) do
+ActiveRecord::Schema.define(version: 20140210214543) do
+
+  create_table "casas", force: true do |t|
+    t.string   "rua"
+    t.string   "complemento"
+    t.string   "bairro"
+    t.string   "cidade"
+    t.date     "datainicio"
+    t.integer  "proprietario_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "casas", ["proprietario_id"], name: "index_casas_on_proprietario_id"
 
   create_table "proprietarios", force: true do |t|
     t.string   "nome"
