@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210224838) do
+ActiveRecord::Schema.define(version: 20140210230211) do
 
   create_table "casas", force: true do |t|
     t.string   "rua"
@@ -31,6 +31,30 @@ ActiveRecord::Schema.define(version: 20140210224838) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "funcioanarios", force: true do |t|
+    t.string   "nome"
+    t.string   "rua"
+    t.string   "complemento"
+    t.string   "sexo"
+    t.integer  "funcao_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "funcioanarios", ["funcao_id"], name: "index_funcioanarios_on_funcao_id"
+
+  create_table "funcionarios", force: true do |t|
+    t.string   "nome"
+    t.string   "rua"
+    t.string   "complemento"
+    t.string   "sexo"
+    t.integer  "funcao_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "funcionarios", ["funcao_id"], name: "index_funcionarios_on_funcao_id"
 
   create_table "proprietarios", force: true do |t|
     t.string   "nome"

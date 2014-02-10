@@ -1,4 +1,6 @@
 Obra::Application.routes.draw do
+  resources :funcionarios
+
   resources :funcaos
 
   resources :casas
