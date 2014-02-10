@@ -43,9 +43,7 @@ feature 'gerenciar casa' do
 
 
   def preencher_e_verificar_casa
-
-    
-    
+  
     fill_in 'Rua', :with => 'Rua dos BOBOS'
     fill_in 'Complemento', :with => 'n 01'
     fill_in 'Bairro', :with => 'Centro'
